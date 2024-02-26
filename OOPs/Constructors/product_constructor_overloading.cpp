@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+class Product
+{
+    int pro_id;
+    char pro_name[20];
+    int pro_price;
+
+public:
+    Product(int i, char s[], int p)
+    {
+        pro_id = i;
+        strcpy(pro_name, s);
+        pro_price = p;
+    }
+
+    void display()
+    {
+        cout << "\nProduct id: " << pro_id;
+        cout << "\nProduct name: " << pro_name;
+        cout << "\nProduct price: " << pro_price;
+    }
+};
+
+int main()
+{
+    Product p1(1, "soap", 500);
+    Product p2(1, "shampoo", 600);
+    Product p3(1, "conditioner", 700);
+
+    p1.display();
+    p2.display();
+    p3.display();
+
+    return 0;
+}
